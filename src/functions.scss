@@ -1,0 +1,33 @@
+@use "sass:math";
+
+@function z($name) {
+  @if index($z-indexes, $name) {
+    @return (length($z-indexes) - index($z-indexes, $name)) + 1;
+  } @else {
+    @warn 'There is not item "#{name}" in this list; Choose one of: #{$z-indexes}';
+
+    @return null;
+  }
+}
+
+
+html {
+  font-size: calc(100vw / 1093.75 * 10);
+}
+
+
+@function px($size) {
+  $base-font-size: 16;
+  @return math.div($size, $base-font-size) * 1rem;
+}
+
+@function mob($size) {
+  $base-font-size: 4.166;
+  @return math.div($size, $base-font-size) * 1rem;
+}
+
+
+// @function px-to-vmin($px) {
+//   $vmin: 1vmin;
+//   @return ($px / 7.5) * $vmin;
+// }

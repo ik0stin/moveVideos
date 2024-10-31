@@ -1,0 +1,228 @@
+.information {
+  position: fixed;
+  // top: px(120);
+  top: 100%;
+  left: px(30);
+  right: px(30);
+  width: calc(100% - px(60));
+  height: 100%;
+  border: 1px solid #686868;
+  // border-top-left-radius: px(30);
+  // border-top-right-radius: px(30);
+  border-radius: px(30);
+  padding: px(60);
+  background: #000000;
+  z-index: 2;
+
+  &--block {
+    &__title {
+      font-family: Figtree, Arial, sans-serif;
+      font-size: px(29);
+      font-weight: 600;
+      line-height: 130%;
+      color: white;
+      text-align: left;
+      -webkit-font-smoothing: antialiased;
+      margin-bottom: px(60);
+
+      .animated-word {
+        display: inline-block;
+      }
+    }
+
+    &__wrapper {
+      display: flex;
+
+      &--img {
+        width: px(738);
+        height: px(502);
+        border-radius: px(30);
+        border: 1px solid #686868;
+        overflow: hidden;
+        flex-shrink: 0;
+        position: relative;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+
+        video {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          min-width: 100%;
+          min-height: 100%;
+          width: auto;
+          height: auto;
+          transform: translate(-50%, -50%) rotate(180deg);
+          object-fit: cover;
+        }
+      }
+
+      &--card {
+        background: white;
+        border-radius: px(30);
+        padding: px(30);
+        margin-left: px(30);
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+
+        &__title {
+          .circle {
+            display: inline-block;
+            width: px(20);
+            aspect-ratio: 1/1;
+            background: #E2CAFF;
+            border-radius: 50%;
+            margin-right: px(10);
+          }
+
+          .small-title {
+            display: inline-block;
+            font-size: px(20);
+            font-weight: 500;
+            position: relative;
+            top: px(-3);
+          }
+
+          .big-title {
+            margin-top: px(40);
+            font-size: px(80);
+            font-weight: 600;
+            line-height: 80%;
+            width: 100%;
+          }
+        }
+
+        &__descriptions {
+          width: 100%;
+
+          .description {
+            border-bottom: 1px solid #686868;
+            padding: px(15) 0;
+            width: 100%;
+            text-transform: uppercase;
+            font-weight: 500;
+
+            &:last-of-type {
+              border-bottom: none;
+            }
+          }
+        }
+      }
+
+      &--text {
+        margin-left: px(30);
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+        justify-content: flex-end;
+
+        .info {
+          .text {
+            font-size: px(25);
+            font-weight: 400;
+            line-height: 120%;
+            margin-bottom: px(30);
+            color: white;
+          }
+  
+          .circles {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+  .information {
+    left: mob(10);
+    right: mob(10);
+    width: calc(100% - mob(20));
+    border-radius: mob(30);
+    padding: mob(20);
+  
+    &--block {
+      &__title {
+        font-size: mob(15);
+        margin-bottom: mob(20);
+      }
+  
+      &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+  
+        &--img {
+          width: 100%;
+          height: mob(150);
+          border-radius: mob(30);
+          margin-bottom: mob(10);
+        }
+  
+        &--card {
+          width: 100%;
+          background: white;
+          border-radius: mob(30);
+          padding: mob(20);
+          margin-left: 0;
+          display: flex;
+          flex-wrap: wrap;
+          align-content: space-between;
+  
+          &__title {
+            margin-bottom: mob(10);
+            .circle {
+              width: mob(20);
+              margin-right: mob(10);
+            }
+  
+            .small-title {
+              display: inline-block;
+              font-size: mob(15);
+              font-weight: 500;
+              position: relative;
+              top: mob(-3);
+            }
+  
+            .big-title {
+              margin-top: mob(20);
+              font-size: mob(40);
+              br { display: none; }
+            }
+          }
+  
+          &__descriptions {
+            width: 100%;
+  
+            .description {
+              padding: mob(10) 0;
+              font-size: mob(15);
+            }
+          }
+        }
+  
+        &--text {
+          margin-left: 0;
+          .info {
+            .text {
+              display: none;
+            }
+    
+            .circles {
+              display: none;
+            }
+          }
+
+          .close {
+            margin-top: mob(20);
+          }
+        }
+      }
+    }
+  }
+}

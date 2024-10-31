@@ -1,0 +1,83 @@
+@import "reset";
+@import "functions";
+@import "navigation";
+@import "information";
+@import "footer";
+@import "preloader";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow: hidden;
+  position: relative;
+  background-color: #000000;
+}
+
+.webgl {
+  position: fixed;
+  top: -2%;
+  left: 0;
+  outline: none;
+
+  @media screen and (max-width: 991.98px) {
+    // height: 90% !important;
+    top: -10%;
+  }
+}
+
+@font-face {
+  font-family: 'Figtree';
+  src: url(./fonts/Figtree-SemiBold.woff) format("woff");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap
+}
+
+@font-face {
+  font-family: 'Figtree';
+  src: url(./fonts/Figtree-Medium.woff) format("woff");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap
+}
+
+@font-face {
+  font-family: 'Figtree';
+  src: url(./fonts/Figtree-Regular.woff) format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap
+}
+
+img {
+  vertical-align: middle;
+  height: auto;
+}
+
+html {
+  font-family: Figtree, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-size: 16px;
+  padding: 10px 30px 12px;
+  border-radius: 30px;
+  color: white;
+  border: 1px solid white;
+  background: none;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+
+
+  &:hover {
+    background: white;
+    color: #000000;
+  }
+}
+
+

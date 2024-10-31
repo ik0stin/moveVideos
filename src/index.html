@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code structuring</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body id="body">
+  <div class="preloader" 
+        style="position: fixed;
+        background-color: #000;
+        width: 100%;
+        height: 100vh;
+        opacity: 1;
+        z-index: 9999;">
+    <img src="/img/preload.gif" alt="">
+  </div>
+  <canvas class="webgl"></canvas>
+  <nav class="navigation">
+    <p class="navigation--name">Nexus</p>
+    <div class="navigation__wrapper">
+      <button class="navigation__wrapper--button">About</button>
+      <button class="navigation__wrapper--button">Projects</button>
+      <button class="navigation__wrapper--button">Contact us</button>
+    </div>
+  </nav>
+
+  <!-- 1 -->
+  <section class="information info-0">
+    <div class="information--block">
+      <h3 class="information--block__title">Transcending conventional perception, we delve into uncharted realms, blending the tangible with the ethereal. This journey redefines reality, intertwining time and space, and expanding possibilities beyond imagination. Embracing consciousness's fluidity, we connect with the infinite potential within and around us.</h3>
+      <div class="information--block__wrapper">
+        <div class="information--block__wrapper--img block">
+          <video class="video1" preload="auto" autoplay muted loop playsinline x-webkit-airplay="deny" x-moz-airplay="deny">
+            <source src="/textures/video-1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="information--block__wrapper--card block">
+          <div class="information--block__wrapper--card__title">
+            <div class="circle"></div>
+            <p class="small-title">Growth Yourself</p>
+            <p class="big-title">PRO<br> GRAMS</p>
+          </div>
+          <div class="information--block__wrapper--card__descriptions">
+            <p class="description">Transcending Perception</p>
+            <p class="description">Tangible Meets Ethereal</p>
+            <p class="description">Embracing Potential</p>
+          </div>
+        </div>
+        <div class="information--block__wrapper--text block">
+          <div class="info">
+            <p class="text">Innovation, creativity, culture, and excellence with industry leaders</p>
+            <svg class="circles" width="397" height="237" viewBox="0 0 397 237" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="18.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="58.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="98.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="138.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="178.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="218.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="258.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="298.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="338.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="378.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="18.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="58.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="98.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="138.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="178.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="218.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="258.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="298.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="338.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="378.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="18.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="58.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="98.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="138.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="178.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="218.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="258.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="298.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="338.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="378.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="18.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="58.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="98.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="138.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="178.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="218.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="258.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="298.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="338.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="378.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="18.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="58.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="98.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="138.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="178.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="218.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="258.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="298.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="338.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="378.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="18.5" cy="218.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="58.5" cy="218.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="98.5" cy="218.5" r="18.5" fill="white" fill-opacity="0.2"/>
+            </svg>
+          </div>  
+          <button class="button close">Back</button>            
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 2 -->
+  <section class="information info-1">
+    <div class="information--block">
+      <h3 class="information--block__title">Transcending conventional perception, we delve into uncharted realms, blending the tangible with the ethereal. This journey redefines reality, intertwining time and space, and expanding possibilities beyond imagination. Embracing consciousness's fluidity, we connect with the infinite potential within and around us.</h3>
+      <div class="information--block__wrapper">
+        <div class="information--block__wrapper--img block">
+          <video class="video1" preload="auto" autoplay muted loop playsinline x-webkit-airplay="deny" x-moz-airplay="deny">
+            <source src="/textures/video-2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="information--block__wrapper--card block">
+          <div class="information--block__wrapper--card__title">
+            <div class="circle"></div>
+            <p class="small-title">Growth Yourself</p>
+            <p class="big-title">PRO<br> GRAMS</p>
+          </div>
+          <div class="information--block__wrapper--card__descriptions">
+            <p class="description">Transcending Perception</p>
+            <p class="description">Tangible Meets Ethereal</p>
+            <p class="description">Embracing Potential</p>
+          </div>
+        </div>
+        <div class="information--block__wrapper--text block">
+          <div class="info">
+            <p class="text">Innovation, creativity, culture, and excellence with industry leaders</p>
+            <svg class="circles" width="397" height="237" viewBox="0 0 397 237" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="18.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="58.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="98.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="138.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="178.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="218.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="258.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="298.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="338.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="378.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="18.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="58.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="98.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="138.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="178.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="218.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="258.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="298.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="338.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="378.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="18.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="58.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="98.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="138.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="178.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="218.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="258.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="298.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="338.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="378.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="18.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="58.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="98.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="138.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="178.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="218.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="258.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="298.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="338.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="378.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="18.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="58.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="98.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="138.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="178.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="218.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="258.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="298.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="338.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="378.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="18.5" cy="218.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="58.5" cy="218.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="98.5" cy="218.5" r="18.5" fill="white" fill-opacity="0.2"/>
+            </svg>
+          </div>  
+          <button class="button close">Back</button>            
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 3 -->
+  <section class="information info-2">
+    <div class="information--block">
+      <h3 class="information--block__title">Transcending conventional perception, we delve into uncharted realms, blending the tangible with the ethereal. This journey redefines reality, intertwining time and space, and expanding possibilities beyond imagination. Embracing consciousness's fluidity, we connect with the infinite potential within and around us.</h3>
+      <div class="information--block__wrapper">
+        <div class="information--block__wrapper--img block">
+          <video class="video1" preload="auto" autoplay muted loop playsinline x-webkit-airplay="deny" x-moz-airplay="deny">
+            <source src="/textures/video-3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="information--block__wrapper--card block">
+          <div class="information--block__wrapper--card__title">
+            <div class="circle"></div>
+            <p class="small-title">Growth Yourself</p>
+            <p class="big-title">PRO<br> GRAMS</p>
+          </div>
+          <div class="information--block__wrapper--card__descriptions">
+            <p class="description">Transcending Perception</p>
+            <p class="description">Tangible Meets Ethereal</p>
+            <p class="description">Embracing Potential</p>
+          </div>
+        </div>
+        <div class="information--block__wrapper--text block">
+          <div class="info">
+            <p class="text">Innovation, creativity, culture, and excellence with industry leaders</p>
+            <svg class="circles" width="397" height="237" viewBox="0 0 397 237" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="18.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="58.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="98.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="138.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="178.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="218.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="258.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="298.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="338.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="378.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="18.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="58.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="98.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="138.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="178.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="218.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="258.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="298.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="338.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="378.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="18.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="58.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="98.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="138.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="178.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="218.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="258.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="298.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="338.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="378.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="18.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="58.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="98.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="138.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="178.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="218.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="258.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="298.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="338.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="378.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="18.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="58.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="98.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="138.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="178.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="218.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="258.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="298.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="338.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="378.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="18.5" cy="218.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="58.5" cy="218.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="98.5" cy="218.5" r="18.5" fill="white" fill-opacity="0.2"/>
+            </svg>
+          </div>  
+          <button class="button close">Back</button>            
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 4 -->
+  <section class="information info-3">
+    <div class="information--block">
+      <h3 class="information--block__title">Transcending conventional perception, we delve into uncharted realms, blending the tangible with the ethereal. This journey redefines reality, intertwining time and space, and expanding possibilities beyond imagination. Embracing consciousness's fluidity, we connect with the infinite potential within and around us.</h3>
+      <div class="information--block__wrapper">
+        <div class="information--block__wrapper--img block">
+          <video class="video1" preload="auto" autoplay muted loop playsinline x-webkit-airplay="deny" x-moz-airplay="deny">
+            <source src="/textures/video-4.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="information--block__wrapper--card block">
+          <div class="information--block__wrapper--card__title">
+            <div class="circle"></div>
+            <p class="small-title">Growth Yourself</p>
+            <p class="big-title">PRO<br> GRAMS</p>
+          </div>
+          <div class="information--block__wrapper--card__descriptions">
+            <p class="description">Transcending Perception</p>
+            <p class="description">Tangible Meets Ethereal</p>
+            <p class="description">Embracing Potential</p>
+          </div>
+        </div>
+        <div class="information--block__wrapper--text block">
+          <div class="info">
+            <p class="text">Innovation, creativity, culture, and excellence with industry leaders</p>
+            <svg class="circles" width="397" height="237" viewBox="0 0 397 237" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="18.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="58.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="98.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="138.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="178.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="218.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="258.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="298.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="338.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="378.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="18.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="58.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="98.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="138.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="178.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="218.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="258.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="298.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="338.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="378.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="18.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="58.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="98.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="138.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="178.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="218.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="258.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="298.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="338.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="378.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="18.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="58.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="98.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="138.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="178.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="218.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="258.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="298.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="338.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="378.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="18.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="58.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="98.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="138.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="178.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="218.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="258.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="298.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="338.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="378.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="18.5" cy="218.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="58.5" cy="218.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="98.5" cy="218.5" r="18.5" fill="white" fill-opacity="0.2"/>
+            </svg>
+          </div>  
+          <button class="button close">Back</button>            
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 5 -->
+  <section class="information info-4">
+    <div class="information--block">
+      <h3 class="information--block__title">Transcending conventional perception, we delve into uncharted realms, blending the tangible with the ethereal. This journey redefines reality, intertwining time and space, and expanding possibilities beyond imagination. Embracing consciousness's fluidity, we connect with the infinite potential within and around us.</h3>
+      <div class="information--block__wrapper">
+        <div class="information--block__wrapper--img block">
+          <video class="video1" preload="auto" autoplay muted loop playsinline x-webkit-airplay="deny" x-moz-airplay="deny">
+            <source src="/textures/video-5.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="information--block__wrapper--card block">
+          <div class="information--block__wrapper--card__title">
+            <div class="circle"></div>
+            <p class="small-title">Growth Yourself</p>
+            <p class="big-title">PRO<br> GRAMS</p>
+          </div>
+          <div class="information--block__wrapper--card__descriptions">
+            <p class="description">Transcending Perception</p>
+            <p class="description">Tangible Meets Ethereal</p>
+            <p class="description">Embracing Potential</p>
+          </div>
+        </div>
+        <div class="information--block__wrapper--text block">
+          <div class="info">
+            <p class="text">Innovation, creativity, culture, and excellence with industry leaders</p>
+            <svg class="circles" width="397" height="237" viewBox="0 0 397 237" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="18.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="58.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="98.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="138.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="178.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="218.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="258.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="298.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="338.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="378.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="18.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="58.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="98.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="138.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="178.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="218.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="258.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="298.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="338.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="378.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="18.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="58.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="98.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="138.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="178.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="218.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="258.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="298.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="338.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="378.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="18.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="58.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="98.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="138.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="178.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="218.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="258.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="298.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="338.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="378.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="18.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="58.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="98.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="138.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="178.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="218.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="258.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="298.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="338.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="378.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="18.5" cy="218.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="58.5" cy="218.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="98.5" cy="218.5" r="18.5" fill="white" fill-opacity="0.2"/>
+            </svg>
+          </div>  
+          <button class="button close">Back</button>            
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 6 -->
+  <section class="information info-5">
+    <div class="information--block">
+      <h3 class="information--block__title">Transcending conventional perception, we delve into uncharted realms, blending the tangible with the ethereal. This journey redefines reality, intertwining time and space, and expanding possibilities beyond imagination. Embracing consciousness's fluidity, we connect with the infinite potential within and around us.</h3>
+      <div class="information--block__wrapper">
+        <div class="information--block__wrapper--img block">
+          <video class="video1" preload="auto" autoplay muted loop playsinline x-webkit-airplay="deny" x-moz-airplay="deny">
+            <source src="/textures/video-6.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="information--block__wrapper--card block">
+          <div class="information--block__wrapper--card__title">
+            <div class="circle"></div>
+            <p class="small-title">Growth Yourself</p>
+            <p class="big-title">PRO<br> GRAMS</p>
+          </div>
+          <div class="information--block__wrapper--card__descriptions">
+            <p class="description">Transcending Perception</p>
+            <p class="description">Tangible Meets Ethereal</p>
+            <p class="description">Embracing Potential</p>
+          </div>
+        </div>
+        <div class="information--block__wrapper--text block">
+          <div class="info">
+            <p class="text">Innovation, creativity, culture, and excellence with industry leaders</p>
+            <svg class="circles" width="397" height="237" viewBox="0 0 397 237" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="18.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="58.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="98.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="138.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="178.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="218.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="258.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="298.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="338.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="378.5" cy="18.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="18.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="58.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="98.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="138.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="178.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="218.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="258.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="298.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="338.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="378.5" cy="58.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="18.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="58.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="98.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="138.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="178.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="218.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="258.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="298.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="338.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="378.5" cy="98.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="18.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="58.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="98.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="138.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="178.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="218.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="258.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="298.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="338.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="378.5" cy="138.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="18.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="58.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="98.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="138.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="178.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="218.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="258.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="298.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="338.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="378.5" cy="178.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="18.5" cy="218.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="58.5" cy="218.5" r="18.5" fill="white" fill-opacity="0.2"/>
+              <circle cx="98.5" cy="218.5" r="18.5" fill="white" fill-opacity="0.2"/>
+            </svg>
+          </div>  
+          <button class="button close">Back</button>            
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="footer">
+    <p class="footer--information">© 2008 - 2024. All rights reserved.</p>
+  </div>
+
+  <script type="module" src="./script.js"></script>
+</body>
+</html>
